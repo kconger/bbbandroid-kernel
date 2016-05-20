@@ -11,6 +11,17 @@
 
 /include/ "am335x-bone-common.dtsi"
 
+/ {
+	bone_capemgr {
+		baseboardmaps {
+			baseboard_beaglebone_black: board@1 {
+				board-name = "A335BNLT";
+				compatible-name = "ti,beaglebone-black";
+			};
+		};
+	};
+};
+
 &am33xx_pinmux {
 	rstctl_pins: pinmux_rstctl_pins {
 		pinctrl-single,pins = <

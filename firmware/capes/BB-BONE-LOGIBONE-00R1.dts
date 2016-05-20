@@ -13,7 +13,7 @@
 /plugin/;
 
 / {
-	compatible = "ti,beaglebone", "ti,beaglebone-black";
+	compatible = "ti,beaglebone", "ti,beaglebone-black", "ti,beaglebone-green";
 
 	/* identification */
 	part-number = "BB-BONE-LOGIBONE";
@@ -45,7 +45,10 @@
 		"P8.8",		/* gpmc: gpmc_oen_ren */
 		"P8.10",	/* gpmc: gpmc_wen */
 		"P8.9",		/* gpmc: gpmc_ben0_cle */
-
+		"P9.28",
+		"P9.29",
+		"P9.30",
+		"P9.31",
 		"gpmc",
 		/* the reset pin */
 		"eMMC_RSTn";
@@ -88,10 +91,10 @@
 			fpga_config_pins: pinmux_fpga_config_pins {
 				pinctrl-single,pins = <
 					/* config clk and data */
-					0x190 0x13    /* P9_31 = mcasp0_aclkx.spi1_sclk                 , OUTPUT_PULLUP | MODE3 */
-                    			0x194 0x33    /* P9_29 = mcasp0_fsx.spi1_d0                     , INPUT_PULLUP  | MODE3 */
-                    			0x198 0x13    /* P9_30 = mcasp0_axr0.spi1_d1                     , OUTPUT_PULLUP | MODE3 */
-                    			0x19c 0x13    /* P9_28 = mcasp0_ahclkr.spi1_cs0                 , OUTPUT_PULLUP | MODE3 */
+					0x190 0x33    /* P9_31 = mcasp0_aclkx.spi1_sclk                 , INPUT_PULLUP | MODE3 */
+					0x194 0x33    /* P9_29 = mcasp0_fsx.spi1_d0                     , INPUT_PULLUP  | MODE3 */
+					0x198 0x13    /* P9_30 = mcasp0_axr0.spi1_d1                     , OUTPUT_PULLUP | MODE3 */
+					0x19c 0x13    /* P9_28 = mcasp0_ahclkr.spi1_cs0                 , OUTPUT_PULLUP | MODE3 */
 
 				>;
 			};
